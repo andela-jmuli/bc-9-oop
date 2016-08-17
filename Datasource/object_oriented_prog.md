@@ -44,3 +44,49 @@ class Customer(object):
 		self.balance += amount
 		return self.balance
 ```
+
+The Customer class doesn't really create a new customer. To do so, we call the class's init method with the proper argument number. Thus:  
+```
+ joseph = Customer('Joseph Muli', 5000.0)
+```
+
+
+###### Instance Attributes and Methods  
+
+A function defined in a class is called a "method". Methods have access to all the data contained on the instace of the object. They can access and modify anything previously set on self. Because they use self, they require an instance of the class in order to be used thus referred to as instance methods.  
+
+
+###### Static Methods  
+
+Class attributes are attributes that are set at the class-level, as opposed to the instance-level. Normal attributes are introduced in the init method, but some attributes of a class hold for all instances in all cases.
+
+```
+class Car(object):
+	wheels = 4
+
+	def __init__(self, make, model):
+		self.make = make
+		self.model = model
+
+
+"""
+object instantiation
+"""
+speedster = Car('Pagani', 'Zonda')
+print speedster.wheels
+"""
+returns 4
+"""
+
+```
+
+Static Methods don't have access to **self**. Just like class attributes, they are methods that work without requiring an instance to be present. Thus static methods have no self parameter and take the decorator @staticmethod when defined. An example:  
+
+```
+class Car(object):
+	
+	@staticmethod
+	def make_car_sound():
+		print 'Vrooooooooooooooom!'
+
+```
