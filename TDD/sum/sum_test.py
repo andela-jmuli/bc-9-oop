@@ -27,6 +27,3 @@ class MySumTest(unittest.TestCase):
 if __name__=='__main__':
 	unittest.main()
 
-
-# msg 2  msg = 'Please check arguments for none integers'
-# msg 3  msg = "results shouldn't be null"
