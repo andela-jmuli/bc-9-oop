@@ -18,7 +18,7 @@ class NotesApplication(object):
 		'''
 		note_data = self.note_list.append(note_content)
 		# print type(self.note_list)
-		# return note_data
+		return note_data
 
 
 	def list(self):
@@ -62,7 +62,7 @@ class NotesApplication(object):
 		'''
 		# this edits note content in relation to a note ID in the (db)note_list
 		self.note_list[note_id] = note_content
-		# return note_content
+		return note_content
 
 
 
