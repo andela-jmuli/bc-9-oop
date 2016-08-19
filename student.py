@@ -19,14 +19,15 @@ class Student(object):
 # Make at least 5 students attend class
 
 	def attend_class(self, date, **kwargs):
+
+		# this contains default data outputed if dict not specified
 		dee = {teacher: 'Alex', location : 'Hogwarts'}
+
 		if kwargs is not None:
 			if date == date.today():
 				new_dict = {}
-				# return True
-				# for key, value in kwargs.iteritems():
-				# 	new_dict[key] = value
-				# return new_dict
+				# this confirms student instance attend_class class in specified date (currently today)
+				return True
 			return False
 		return dee
 		
