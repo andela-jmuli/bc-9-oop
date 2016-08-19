@@ -5,7 +5,7 @@ class NotesApplication(object):
 	"""
 	Class notes application
 	"""
-	def __init__(self, author, note_list):
+	def __init__(self, author, note_list=[]):
 		
 		self.author = author
 		self.note_list = note_list
@@ -27,7 +27,7 @@ class NotesApplication(object):
 		'''
 
 		auth = 'By Author'
-		for k, v in enumerate(self.note_list)
+		for k, v in enumerate(self.note_list):
 			
 			line_data = str(k) + v + auth + self.author
 			
