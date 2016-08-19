@@ -6,7 +6,7 @@ class NotesApplication(object):
 	Class notes application
 	"""
 	def __init__(self, author, note_list=[]):
-		
+			
 		self.author = author
 		self.note_list = note_list
 
@@ -17,8 +17,8 @@ class NotesApplication(object):
 	This method takes note content as the parameter and adds new note data to the list 'note_list'
 		'''
 		note_data = self.note_list.append(note_content)
+		# print type(self.note_list)
 		# return note_data
-
 
 
 	def list(self):
@@ -40,9 +40,9 @@ class NotesApplication(object):
 	This function takes a note_id which refers to the index of the note 
 	in the notes list and returns the content of that note as a string.
 		'''
-		note_info = self.note_list[note_id].note_content
+		# note_info = self.note_list[note_id].note_content
 
-		return note_info
+		# return note_info
 
 
 
@@ -62,6 +62,7 @@ class NotesApplication(object):
 		'''
 		# this edits note content in relation to a note ID in the (db)note_list
 		self.note_list[note_id] = note_content
+		# return note_content
 
 
 
@@ -70,7 +71,7 @@ class NotesApplication(object):
 	This function take a search string, search_text and returns all
 	the notes with that text within it.
 		'''
-		speak = "Showing results for search '%s'".format(search_text)
+		speak = "Showing results for search '{0}'".format(search_text)
 		final = "By author"
 
 		for key, value in enumerate(note_list):
@@ -78,4 +79,10 @@ class NotesApplication(object):
 
 				speech = speak + str(self.note_id) + v + final + self.author
 
-				return speech
+				return 
+
+
+# kikapu = []
+# nb = NotesApplication('Joseph', kikapu)
+
+# nb.create('Hello')
