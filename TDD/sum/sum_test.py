@@ -11,14 +11,8 @@ class MySumTest(unittest.TestCase):
 	def test_for_null(self):
 		self.assertIsNotNone(my_sum(10, 15), 0)
 
-	# def test_for_non_numbers(self):
-	# 	'''
-	# 	Assertion throwing of exception when it's a non-number
-	# 	'''
-	# 	self.assertFalse(my_sum(10, 15), 25)
-
-	# def test_for_strings(self):
-	# 	self.assertEquals(my_sum('Jo', 'jo'), 'Not valid')
+	def test_non_numbers(self):
+		self.assertNotEqual(my_sum('jo', 'jo'), 0, msg="please provide integers")
 
 
 
