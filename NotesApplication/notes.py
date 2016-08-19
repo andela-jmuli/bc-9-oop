@@ -79,7 +79,7 @@ class NotesApplication(object):
 
 				speech = speak + str(self.note_id) + v + final + self.author
 
-				return 
+				return speech
 
 
 # kikapu = []
