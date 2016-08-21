@@ -7,10 +7,10 @@ class NotesApplication(object):
 	"""
 	def __init__(self, author, note_list=[]):
 
-		if author == '' or len(note_list) == 0:
-			raise TypeError('Arguments expected, Null provided')
-		elif type(note_list) != list:
-			raise TypeError('List expected as argument 2')
+		# if author == '' or len(note_list) == 0:
+		# 	raise TypeError('Arguments expected, Null provided')
+		# elif type(note_list) != list:
+		# 	raise TypeError('List expected as argument 2')
 			
 		self.author = author
 		self.note_list = note_list
@@ -21,7 +21,7 @@ class NotesApplication(object):
 		'''
 	This method takes note content as the parameter and adds new note data to the list 'note_list'
 		'''
-		if len(note_content) == 0:
+		if note_content == None:
 			raise TypeError('List should not be empty')
 			
 		else:
@@ -59,10 +59,13 @@ class NotesApplication(object):
 		'''
 	This function deletes the note at the index note_id of the notes list.
 		'''
-		# this deletes (pops) note data from the (db)note_list in relation to it's note id
-		self.note_list.pop(note_id)
-		
-		return self.note_list
+		# this deletes(pops) note data from the (db)note_list in relation to it's note id
+		# first checks whether item is existent
+		if self.note_list[note_id]:
+			deleted = self.note_list.pop(note_id)
+			return deleted
+		else:
+			return 'Note does not exist'
 
 
 
